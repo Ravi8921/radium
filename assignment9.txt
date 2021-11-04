@@ -1,1 +1,76 @@
 ravi
+question1
+
+ravi@ravi-desktop:~/Desktop/radium$ cd ..
+ravi@ravi-desktop:~/Desktop$ mkdir assignment
+ravi@ravi-desktop:~/Desktop$ cd assignment
+ravi@ravi-desktop:~/Desktop/assignment$ mkdir source
+ravi@ravi-desktop:~/Desktop/assignment$ mkdir destination
+ravi@ravi-desktop:~/Desktop/assignment$ cd source
+ravi@ravi-desktop:~/Desktop/assignment/source$ cat >newfile.txt
+assignment 9
+ravi@ravi-desktop:~/Desktop/assignment/source$ cat newfile.txt
+assignment 9
+ravi@ravi-desktop:~/Desktop/assignment/source$ cd ..
+ravi@ravi-desktop:~/Desktop/assignment$ pwd
+/home/ravi/Desktop/assignment
+ravi@ravi-desktop:~/Desktop/assignment$ cp -r source/newfile.txt destination/
+ravi@ravi-desktop:~/Desktop/assignment$ cd destination/
+ravi@ravi-desktop:~/Desktop/assignment/destination$ ls
+newfile.txt
+ravi@ravi-desktop:~/Desktop/assignment/destination$ cd source/
+bash: cd: source/: No such file or directory
+ravi@ravi-desktop:~/Desktop/assignment/destination$ cd ..
+ravi@ravi-desktop:~/Desktop/assignment$ cd source
+ravi@ravi-desktop:~/Desktop/assignment/source$ ls
+newfile.txt
+ravi@ravi-desktop:~/Desktop/assignment/source$ 
+
+
+
+
+
+
+
+
+question 2
+
+ravi@ravi-desktop:~/Desktop/assignment$ mv source/newfile.txt destination/
+ravi@ravi-desktop:~/Desktop/assignment$ ls
+destination  source
+ravi@ravi-desktop:~/Desktop/assignment$ cd source
+ravi@ravi-desktop:~/Desktop/assignment/source$ ls
+ravi@ravi-desktop:~/Desktop/assignment/source$ cd destination
+bash: cd: destination: No such file or directory
+ravi@ravi-desktop:~/Desktop/assignment/source$ cd ..
+ravi@ravi-desktop:~/Desktop/assignment$ cd destination
+ravi@ravi-desktop:~/Desktop/assignment/destination$ ls
+newfile.txt
+ravi@ravi-desktop:~/Desktop/assignment/destination$ 
+
+
+
+
+
+
+question 3
+
+ravi@ravi-desktop:~/Desktop/assignment$ cd destination
+ravi@ravi-desktop:~/Desktop/assignment/destination$ ls
+newfile.txt
+ravi@ravi-desktop:~/Desktop/assignment/destination$ vim newfile.txt
+ravi@ravi-desktop:~/Desktop/assignment/destination$ cat newfile.txt
+assignment 9
+FunctionUp is best plateform
+Lorem Ipsum refers to a dummy block of text that is often used in publishing and graphic design to fill gaps in the page before the actual words are put into the finished product. Lorem ipsum resembles Latin but has no real meaning.
+functionUp 2
+functionUp 3
+Lorem Ipsum refers to a dummy block of text that is often used in publishing and graphic design to fill gaps in the page before the actual words are put into the finished product. Lorem ipsum resembles Latin but has no real meaning.
+ravi@ravi-desktop:~/Desktop/assignment/destination$ grep -i "functionup" newfile.txt
+FunctionUp is best plateform
+functionUp 2
+functionUp 3
+ravi@ravi-desktop:~/Desktop/assignment/destination$ 
+
+
+
