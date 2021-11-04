@@ -1,0 +1,199 @@
+ravi@ravi-desktop:~/Desktop$ git clone https://github.com/Ravi8921/radium.git
+Cloning into 'radium'...
+remote: Enumerating objects: 15, done.
+remote: Counting objects: 100% (15/15), done.
+remote: Compressing objects: 100% (13/13), done.
+remote: Total 15 (delta 2), reused 6 (delta 0), pack-reused 0
+Unpacking objects: 100% (15/15), 3.74 KiB | 638.00 KiB/s, done.
+ravi@ravi-desktop:~/Desktop$ git status
+fatal: not a git repository (or any of the parent directories): .git
+ravi@ravi-desktop:~/Desktop$ cd radium
+ravi@ravi-desktop:~/Desktop/radium$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+ravi@ravi-desktop:~/Desktop/radium$ pwd
+/home/ravi/Desktop/radium
+ravi@ravi-desktop:~/Desktop/radium$ ls
+LICENSE  package.json  README.md  src
+ravi@ravi-desktop:~/Desktop/radium$ src
+
+Command 'src' not found, but can be installed with:
+
+sudo apt install simple-revision-control
+
+ravi@ravi-desktop:~/Desktop/radium$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+ravi@ravi-desktop:~/Desktop/radium$ cd radium
+bash: cd: radium: No such file or directory
+ravi@ravi-desktop:~/Desktop/radium$ git branch -a
+* main
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/demo
+  remotes/origin/main
+ravi@ravi-desktop:~/Desktop/radium$ git checkout demo
+Branch 'demo' set up to track remote branch 'demo' from 'origin'.
+Switched to a new branch 'demo'
+ravi@ravi-desktop:~/Desktop/radium$ git status
+On branch demo
+Your branch is up to date with 'origin/demo'.
+
+nothing to commit, working tree clean
+ravi@ravi-desktop:~/Desktop/radium$ git checkout -b recap/session
+Switched to a new branch 'recap/session'
+ravi@ravi-desktop:~/Desktop/radium$ cat >sbmission .txt
+cat: .txt: No such file or directory
+ravi@ravi-desktop:~/Desktop/radium$ cat > submission.txt
+this is ravi
+ravi@ravi-desktop:~/Desktop/radium$ git status
+On branch recap/session
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	sbmission
+	submission.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+ravi@ravi-desktop:~/Desktop/radium$ rm submission
+rm: cannot remove 'submission': No such file or directory
+ravi@ravi-desktop:~/Desktop/radium$ git status
+On branch recap/session
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	sbmission
+	submission.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+ravi@ravi-desktop:~/Desktop/radium$ git add submission.txt
+ravi@ravi-desktop:~/Desktop/radium$ git status
+On branch recap/session
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   submission.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	sbmission
+
+ravi@ravi-desktop:~/Desktop/radium$ git add submission
+fatal: pathspec 'submission' did not match any files
+ravi@ravi-desktop:~/Desktop/radium$ git status
+On branch recap/session
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   submission.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	sbmission
+
+ravi@ravi-desktop:~/Desktop/radium$ git config --list
+user.name=Ravi8921
+user.email=ravikant8921@gmail.com
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+remote.origin.url=https://github.com/Ravi8921/radium.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+branch.main.remote=origin
+branch.main.merge=refs/heads/main
+branch.demo.remote=origin
+branch.demo.merge=refs/heads/demo
+ravi@ravi-desktop:~/Desktop/radium$ git commit -m "recap of the session"
+[recap/session a70bf6a] recap of the session
+ 1 file changed, 1 insertion(+)
+ create mode 100644 submission.txt
+ravi@ravi-desktop:~/Desktop/radium$ git push --set-upstream origin recap/session
+fatal: unable to access 'https://github.com/Ravi8921/radium.git/': Could not resolve host: github.com
+ravi@ravi-desktop:~/Desktop/radium$ git push --set-upstream origin recap/session
+Username for 'https://github.com': Ravi8921
+Password for 'https://Ravi8921@github.com': 
+remote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.
+remote: Please see https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/ for more information.
+fatal: Authentication failed for 'https://github.com/Ravi8921/radium.git/'
+ravi@ravi-desktop:~/Desktop/radium$ git push --set-upstream origin recap/session
+Username for 'https://github.com': Ravi8921
+Password for 'https://Ravi8921@github.com': 
+remote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.
+remote: Please see https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/ for more information.
+fatal: Authentication failed for 'https://github.com/Ravi8921/radium.git/'
+ravi@ravi-desktop:~/Desktop/radium$ git push
+fatal: The current branch recap/session has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin recap/session
+
+ravi@ravi-desktop:~/Desktop/radium$ git push --set-upstream origin recap/session
+Username for 'https://github.com': Ravi8921
+Password for 'https://Ravi8921@github.com': 
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 292 bytes | 292.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'recap/session' on GitHub by visiting:
+remote:      https://github.com/Ravi8921/radium/pull/new/recap/session
+remote: 
+To https://github.com/Ravi8921/radium.git
+ * [new branch]      recap/session -> recap/session
+Branch 'recap/session' set up to track remote branch 'recap/session' from 'origin'.
+ravi@ravi-desktop:~/Desktop/radium$ git branch -a
+  demo
+  main
+* recap/session
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/demo
+  remotes/origin/main
+  remotes/origin/recap/session
+ravi@ravi-desktop:~/Desktop/radium$ cat >my file.txt
+ravi@ravi-desktop:~/Desktop/radium$ git status
+On branch recap/session
+Your branch is up to date with 'origin/recap/session'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	my
+	sbmission
+
+nothing added to commit but untracked files present (use "git add" to track)
+ravi@ravi-desktop:~/Desktop/radium$ git add my
+ravi@ravi-desktop:~/Desktop/radium$ git add my file.txt
+ravi@ravi-desktop:~/Desktop/radium$ git status
+On branch recap/session
+Your branch is up to date with 'origin/recap/session'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   my
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	sbmission
+
+ravi@ravi-desktop:~/Desktop/radium$ git commit "my second commit"
+error: pathspec 'my second commit' did not match any file(s) known to git
+ravi@ravi-desktop:~/Desktop/radium$ git commit -m  "my second commit"
+[recap/session 197b0f4] my second commit
+ 1 file changed, 9 insertions(+)
+ create mode 100644 my
+ravi@ravi-desktop:~/Desktop/radium$ git push
+Username for 'https://github.com': Ravi8921
+Password for 'https://Ravi8921@github.com': 
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 230 bytes | 230.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Ravi8921/radium.git
+   a70bf6a..197b0f4  recap/session -> recap/session
+ravi@ravi-desktop:~/Desktop/radium$ 
+
